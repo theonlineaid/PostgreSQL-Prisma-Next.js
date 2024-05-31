@@ -1,0 +1,33 @@
+docker compose up
+npm install prisma --save-dev  | dev dependency
+npm install @prisma/client     | global dependencies
+npx prisma init
+
+## Expected behavior
+Prisma should be able to connect to the database.
+## Environment & setup
+But you need to setup it yourself. Go to env file and set username password and database name.
+
+## Prisma information
+There are two type of data models
+01. Migration
+02. Introspection 
+
+Migration is manually generated data model.
+Introspection is automatically generated data model (npx prisma db pull) 
+Previously you have data on database then introspection work automatically.
+
+
+```npx prisma migrate dev --name InitUser```
+
+√ We need to reset the "public" schema at "localhost:5432"
+Do you want to continue? All data will be lost. ... yes
+It will delete all existing databases or data
+
+model attributes must have double @@map or anything
+Prisma support "" code not '' or `` only "" support
+you can map any field ``name  String @map("fullname")``
+it will change name to fullname field.
+
+
+
